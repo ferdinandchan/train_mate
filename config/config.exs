@@ -9,7 +9,10 @@ use Mix.Config
 
 # Configures the endpoint
 config :train_mate, TrainMateWeb.Endpoint,
-  url: [host: "localhost"],
+  #
+  # This should be localhost, but changing it to the prod host as a temp fix
+  #
+  url: [host: "gigalixirapp.com"],
   secret_key_base: "4tsd4Oq/L6mbaIhtaJFZHmx9NYjtvVGJECQttLBEqHMW0sDPHeQ4GS0Mf8lCbDYJ",
   render_errors: [view: TrainMateWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: TrainMate.PubSub,
