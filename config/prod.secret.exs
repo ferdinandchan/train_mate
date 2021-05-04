@@ -23,7 +23,7 @@ config :train_mate, TrainMateWeb.Endpoint,
 # If you are doing OTP releases, you need to instruct Phoenix
 # to start each relevant endpoint:
 #
-#     config :train_mate, TrainMateWeb.Endpoint, server: true
+config :train_mate, TrainMateWeb.Endpoint, server: true
 #
 # Then you can assemble a release by calling `mix release`.
 # See `mix help release` for more information.
