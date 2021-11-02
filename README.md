@@ -45,7 +45,7 @@ Release created at _build/prod/rel/my_app!
 
 5. To run the prod release locally, `MIX_ENV=prod APP_NAME=trainmate PORT=4000 _build/prod/rel/train_mate/bin/train_mate start`
 
-6. To push to Gigalixir 
+6. To push to Gigalixir , `git push gigalixir`
 
 ## Learn more
 
