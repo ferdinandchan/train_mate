@@ -1,28 +1,39 @@
 <header>
+<!-- @section_name should give the section name -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid d-flex justify-content-between">
-      <span class="navbar-text"><%= @game_name%></span>
-      <span class="navbar-brand"><%= @section_name%></span>
-      <a class="navbar-text" href="#">About</a>
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><%= @game_name%></a>
+        <ul class="navbar-nav">
+          <li class="nav-item mx-3">
+            <a class="nav-link <%= if @section_name == "Setup" do %>active<% end %>" href="#" phx-click="section-change" phx-value-section_name="Setup">Setup</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link <%= if @section_name == "Rules" do %>active<% end %>" href="#" phx-click="section-change" phx-value-section_name="Rules">Rules</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link <%= if @section_name == "Aids" do %>active<% end %>" href="#" phx-click="section-change" phx-value-section_name="Aids">Aids</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link <%= if @section_name == "Teach" do %>active<% end %>" href="#" phx-click="section-change" phx-value-section_name="Teach">Teach</a>
+          </li>
+        </ul>
     </div>
   </nav>
 </header>
 <section class="container">
-  <ul class="nav nav-fill nav-tabs">
-    <li class="nav-item">
-      <a href="#" class="nav-link <%= if @section_name == "Setup" do %>active<% end %> " phx-click="section-change" phx-value-section_name="Setup">Setup</a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link <%= if @section_name == "Teach" do %>active<% end %> " phx-click="section-change" phx-value-section_name="Teach">Teach</a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link <%= if @section_name == "Tools" do %>active<% end %> " phx-click="section-change" phx-value-section_name="Tools">Tools</a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link <%= if @section_name == "Rules" do %>active<% end %> " phx-click="section-change" phx-value-section_name="Rules">Rules</a>
-    </li>
-  </ul>
-</section>
-<section>
-  <h1>1862 helper tools</h1>
+  <%= if @section_name == "Setup" do %>
+  <h2>Setup</h2>
+  <% end  %>
+
+  <%= if @section_name == "Rules" do %>
+  <h2>Rules</h2>
+  <% end  %>
+
+  <%= if @section_name == "Aids" do %>
+  <h2>Aids</h2>
+  <% end  %>
+
+  <%= if @section_name == "Teach" do %>
+  <h2>Teach</h2>
+  <% end  %>
 </section>
